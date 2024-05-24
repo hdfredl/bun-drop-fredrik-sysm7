@@ -1,18 +1,24 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Menu from "./pages/menu";
+// import Menu from "./pages/menu";
 import LogIn from "./pages/login";
 import Favorites from "./pages/favorites";
-import Cart from "./pages/cart";
+import Cart from "./components/Cart";
 import Confirmation from "./pages/confirmation";
 import Payment from "./pages/payment";
 import Home from "./pages/home";
 import logoBlack from "./images/bun-drop-images/logo-black.png";
+import Menu from "./components/Menu";
 
 import "./App.css";
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  function addToCart(item) {
+    setCart((prevCart) => [...prevCart, item]);
+  }
+
   return (
     <>
       <Router>
@@ -30,9 +36,9 @@ function App() {
           <div className="horizontal">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/menu" element={<Menu />} />
+              <Route path="/menu" element={<Menu buyFood={addToCart} />} />
               <Route path="/favorites" element={<Favorites />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<Cart cart={cart} />} />
               <Route path="/login" element={<LogIn />} />
               <Route path="/confirmation" element={<Confirmation />} />
               <Route path="/payment" element={<Payment />} />
