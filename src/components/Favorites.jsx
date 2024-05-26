@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import functionsToReUse from "../universalfunctions/functionsToReUse";
+
+// FLYTTA TILL HOME senare
 
 function Favorites() {
   const menu = functionsToReUse();
   const filteredMenu = menu.filter((item) => item.stars > 7);
 
   filteredMenu.sort((low, high) => high.stars - low.stars);
+
   return (
     <>
       <div className="menu-container-favorites">

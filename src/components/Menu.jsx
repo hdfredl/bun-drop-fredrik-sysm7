@@ -4,14 +4,26 @@ import functionsToReUse from "../universalfunctions/functionsToReUse";
 function Menu({ buyFood }) {
   const menu = functionsToReUse(); // hämta in db
   const [filter, setFilter] = useState(null);
+  const [searchBar, setSearchBar] = useState("");
 
-  const filteredMenu = filter
-    ? menu.filter((item) => item.category === filter)
-    : menu;
+  // skapa en modal
 
-  // function addToCart(item) {
-  //   console.log("Ordered!", item);
-  // }
+  const filteredMenu = menu.filter((item) => {
+    if (filter && item.category !== filter) {
+      // om det inte stämmer överens mellan filt & category
+      return false;
+    }
+
+    // Skapa searchbar för dynamiskt sökning
+    if (
+      searchBar &&
+      !item.title.toLowerCase().includes(searchBar.toLowerCase())
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  });
 
   const handleAddToCart = (item) => {
     console.log(buyFood);
@@ -26,7 +38,14 @@ function Menu({ buyFood }) {
         <button onClick={() => setFilter("sides")}>Sides</button>
         <button onClick={() => setFilter("burgers")}>Burgers</button>
         <button onClick={() => setFilter("drinks")}>Drinks</button>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchBar}
+          onChange={(e) => setSearchBar(e.target.value)}
+        />
       </div>
+      <div></div>
       <div className="menu-container">
         {filteredMenu.map((item) => (
           <div key={item.id} className="menu-card">

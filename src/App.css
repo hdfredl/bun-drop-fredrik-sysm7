@@ -151,5 +151,88 @@ nav a:hover {
 }
 
 .img-home.spin {
-  animation: spin 8s linear infinite;
+  animation: spin s linear infinite;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: lightslategrey;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-input-textbox {
+  margin-bottom: 15px;
+}
+
+.form-input-textbox label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-input-textbox input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.form-input-textbox input:focus {
+  border-color: #66afe9;
+}
+
+.form-radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.form-radio-group label {
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 200px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+.modal-poppingup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: lightgreen;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
