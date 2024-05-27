@@ -62,38 +62,40 @@ function App() {
     <>
       <Router>
         <div>
-          <nav className="navbar">
-            <img src={logoBlack} alt="logo-black" className="nav-logo" />
-            <Link to="/">Home</Link>
-            <Link to="/menu">Menu</Link>
-            <Link to="/favorites">Favorites</Link>
-            <Link to="/cart">Cart</Link>
-            {/* <Link to="/confirmation">Confirmation</Link> */}
-            {/* <Link to="/payment">Payment</Link> */}
-            <Link to="/login">Log In</Link>
-          </nav>
-          <div className="horizontal">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/menu" element={<Menu buyFood={addToCart} />} />
-              <Route path="/favorites" element={<Favorites />} />
-              <Route
-                path="/cart"
-                element={
-                  <Cart
-                    cart={cart}
-                    updateQuantity={updateQuantity}
-                    removeFromCart={removeFromCart}
-                  />
-                }
-              />
-              <Route path="/login" element={<LogIn />} />
-              <Route path="/confirmation" element={<Confirmation />} />
-              <Route
-                path="/payment"
-                element={<Payment cart={cart} clearCart={clearCart} />}
-              />
-            </Routes>
+          <div>
+            <nav className="navbar">
+              <img src={logoBlack} alt="logo-black" className="nav-logo" />
+              <Link to="/">Home</Link>
+              <Link to="/menu">Menu</Link>
+              <Link to="/favorites">Favorites</Link>
+              <Link to="/cart">Cart</Link>
+              {/* <Link to="/confirmation">Confirmation</Link> */}
+              {/* <Link to="/payment">Payment</Link> */}
+              <Link to="/login">Log In</Link>
+            </nav>
+            <div className="horizontal">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/menu" element={<Menu buyFood={addToCart} />} />
+                <Route path="/favorites" element={<Favorites />} />
+                <Route
+                  path="/cart"
+                  element={
+                    <Cart
+                      cart={cart}
+                      updateQuantity={updateQuantity}
+                      removeFromCart={removeFromCart}
+                    />
+                  }
+                />
+                <Route path="/login" element={<LogIn />} />
+                <Route path="/confirmation" element={<Confirmation />} />
+                <Route
+                  path="/payment"
+                  element={<Payment cart={cart} clearCart={clearCart} />}
+                />
+              </Routes>
+            </div>
           </div>
         </div>
       </Router>

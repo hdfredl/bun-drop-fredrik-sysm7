@@ -9,16 +9,19 @@ function Favorites() {
 
   filteredMenu.sort((low, high) => high.stars - low.stars);
 
+  // Rolla menyn i favoriter..
+  const rolleThatMenu = [...filteredMenu, ...filteredMenu];
+
   return (
     <>
       <div className="menu-container-favorites">
-        {filteredMenu.map((item) => (
-          <div key={item.id} className="menu-card-favorites">
+        {rolleThatMenu.map((item, index) => (
+          <div key={`${item.id}-${index}`} className="menu-card-favorites">
             <h2>{item.title}</h2>
-            <p>{item.description}</p>
-            <p>Points scored: {item.stars} / 10</p>
+            {/* <p>{item.description}</p> */}
             <img src={item.image} alt={item.title} className="img" />
-            <p>Price: ${item.price}</p>
+            <p>Points scored: {item.stars} / 10</p>
+            {/* <p>Price: ${item.price}</p> */}
           </div>
         ))}
       </div>

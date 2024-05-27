@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoBlack from "../images/bun-drop-images/logo color.png";
-import Home from "../components/Home";
+import Favorites from "../components/Favorites";
 
 function home() {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -12,13 +12,9 @@ function home() {
   return (
     <>
       <h1>WELCOME THE BEST BUN DROP/SHOP EVER. </h1>
-      <img
-        src={logoBlack}
-        alt="logo-black"
-        className={isSpinning ? "img-home spin" : "img-home"}
-        onClick={handleSpin}
-      />
-      <h2>We can drop this anywhere, anytime, any buns</h2>
+
+      <h2>We can drop these favorites anywhere, anytime, any buns</h2>
+      <Favorites></Favorites>
     </>
   );
 }

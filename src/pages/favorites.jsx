@@ -5,7 +5,7 @@ import Favorites from "../components/Favorites";
 function favorites() {
   return (
     <>
-      <Favorites></Favorites>
+      <h1>Register for creating a favorite list</h1>
     </>
   );
 }

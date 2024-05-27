@@ -1,4 +1,5 @@
 import React from "react";
+import Favorites from "./Favorites";
 
 function Home() {
   return (
