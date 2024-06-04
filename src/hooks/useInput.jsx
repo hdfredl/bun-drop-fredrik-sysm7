@@ -1,36 +1,40 @@
-import React from "react";
-
 import { useState } from "react";
 
-function useInput() {
+function useInput(type) {
   const [inputValue, setInputValue] = useState("");
-
   const [error, setError] = useState("");
-  const [emailError, setEmailError] = useState("");
 
   function handleInput(e) {
-    setInputValue(e.target.value);
-    if (
-      e.target.placeholder.includes("Email") &&
-      !e.target.value.includes("@")
-    ) {
-      console.log("Need to have a @");
-      setEmailError("Need to have a @");
-    } else {
-      setEmailError("");
-    }
-    if (inputValue.length < 3) {
-      console.log("At least 3 letters");
-      setError("Need to be atleast 3 characters");
-    } else {
-      setError("");
+    const { value } = e.target;
+
+    setInputValue(value);
+
+    if (type === "email") {
+      if (!value.includes("@")) {
+        setError("Need to have a @");
+      } else if (value.length < 3) {
+        setError("Need to be at least 3 characters");
+      } else {
+        setError("");
+      }
+    } else if (type === "password") {
+      if (value.length < 6) {
+        setError("Your password needs to be at least 6 characters");
+      } else {
+        setError("");
+      }
+    } else if (type === "name") {
+      if (value.length < 3) {
+        setError("Need to be at least 3 characters");
+      } else {
+        setError("");
+      }
     }
   }
 
   return {
     inputValue,
     error,
-    emailError,
     handleInput,
   };
 }

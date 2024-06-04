@@ -67,7 +67,7 @@ nav {
   padding: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 55%;
 }
 
 .navbar img.nav-logo {
@@ -235,4 +235,67 @@ button[type="submit"]:hover {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.modal-for-SignUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: grey;
+  padding: 20px;
+  border: 3px solid #ccc;
+  border-radius: 25px;
+}
+
+.sign-in {
+  color: #000;
+}
+
+.userName {
+  color: black;
+}
+
+.modal-history {
+  position: fixed;
+  height: 100%;
+  width: 25%;
+  background-color: grey;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.modal-history-desgin {
+  margin: 20px;
+}
+
+.modal-history .close {
+  font-weight: bold;
+  position: absolute;
+  font-size: 24px;
+  top: 10px;
+  right: 10px;
+}
+
+.order-kvitto {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.round-the-box {
+  border-radius: 25px;
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.round-the-box:focus {
+  border-color: #66afe9;
+  outline: none;
 }

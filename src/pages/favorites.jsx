@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Favorites from "../components/Favorites";
+import UsersFavoritesList from "../components/UsersFavorites";
 
-function favorites() {
+function favorites({ user, setUser }) {
   return (
     <>
-      <h1>Register for creating a favorite list</h1>
+      <UsersFavoritesList user={user} setUser={setUser} />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Confirmation from "./Confirmation";
 
-function Payment({ cart, clearCart }) {
+function Payment({ cart, clearCart, user }) {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,24 +20,57 @@ function Payment({ cart, clearCart }) {
     });
   }
 
+  const handleCloseModal = () => {
+    // Töm cart vid köp
+    clearCart();
+    sendUserToHomeAndConfirm("/");
+  };
+
   const handlePayment = (event) => {
     event.preventDefault();
 
     setShowModal(true);
 
-    console.log("Payment derails:", {
+    const orderDetails = {
+      // Spara variabler i en  const Var
       name,
       address,
       phone,
       cardNumber,
       ccv,
       cart,
-    });
-  };
+      totalPrice,
+    };
 
-  const handleCloseModal = () => {
-    clearCart();
-    sendUserToHomeAndConfirm("/");
+    // om user är inloggad
+    if (user) {
+      const updatedOrders = [...user.orders, orderDetails];
+      const updatedUser = { ...user, orders: updatedOrders };
+      // spara till db
+      fetch(`http://localhost:3000/users/${user.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // -> order
+        body: JSON.stringify({ orders: updatedOrders }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Order saved", data);
+
+          // Ta setUser från Parent - App.jsx, lättare att ha den globalt än i en scope
+          if (typeof setUser === "function") {
+            setUser(updatedUser);
+          }
+
+          // if (setUser) {
+          //   setUser(updatedUser);
+          // }
+        });
+    }
+
+    console.log("Payment details:", orderDetails);
   };
 
   return (
@@ -61,6 +94,7 @@ function Payment({ cart, clearCart }) {
           <div className="form-input-textbox">
             <label>Name</label>
             <input
+              className="round-the-box"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -70,6 +104,7 @@ function Payment({ cart, clearCart }) {
           <div className="form-input-textbox">
             <label>Address</label>
             <input
+              className="round-the-box"
               type="text"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -81,6 +116,7 @@ function Payment({ cart, clearCart }) {
             <div className="form-radio-group">
               <label>
                 <input
+                  className="round-the-box"
                   type="radio"
                   value="card"
                   checked={paymentMethod === "card"}
@@ -90,6 +126,7 @@ function Payment({ cart, clearCart }) {
               </label>
               <label>
                 <input
+                  className="round-the-box"
                   type="radio"
                   value="phone"
                   checked={paymentMethod === "phone"}

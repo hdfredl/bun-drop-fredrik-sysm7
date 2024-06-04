@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Classic Burger",
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
@@ -10,7 +10,7 @@
       "image": "/src/images/bun-drop-images/burger-1.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Black Burger ",
       "price": 14.99,
       "description": "Dark and savoury like crazy. Order this and get super-human strength",
@@ -19,7 +19,7 @@
       "image": "/src/images/bun-drop-images/burger-2.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Cheeseburger",
       "price": 9.49,
       "description": "A juicy beef burger with double cheese, lettuce, and tomato.",
@@ -28,7 +28,7 @@
       "image": "/src/images/bun-drop-images/burger-3.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Bacon Burger",
       "price": 10.99,
       "description": "A beef burger with crispy bacon, lettuce, tomato, and cheese.",
@@ -37,7 +37,7 @@
       "image": "/src/images/bun-drop-images/burger-4.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Veggie Burger",
       "price": 8.49,
       "description": "A delicious veggie patty with lettuce, tomato, and avocado.",
@@ -46,7 +46,7 @@
       "image": "/src/images/bun-drop-images/burger-5.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Mushroom Swiss Burger",
       "price": 10.49,
       "description": "A beef burger topped with Swiss cheese and sautéed mushrooms.",
@@ -55,7 +55,7 @@
       "image": "/src/images/bun-drop-images/burger-6.png"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "BBQ Burger",
       "price": 10.99,
       "description": "A beef burger with BBQ sauce, onion rings, and cheddar cheese.",
@@ -64,7 +64,7 @@
       "image": "/src/images/bun-drop-images/burger-7.png"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Spicy Jalapeno Burger",
       "price": 9.99,
       "description": "A beef burger with spicy jalapenos, pepper jack cheese, and chipotle mayo.",
@@ -73,7 +73,7 @@
       "image": "/src/images/bun-drop-images/burger-8.png"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Blue Cheese Burger",
       "price": 10.49,
       "description": "A beef burger topped with blue cheese, lettuce, and tomato.",
@@ -82,7 +82,7 @@
       "image": "/src/images/bun-drop-images/burger-9.png"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Curly Fries",
       "price": 4.49,
       "description": "Seasoned curly fries, perfect for any meal. Crazy good fries.",
@@ -91,7 +91,7 @@
       "image": "/src/images/bun-drop-images/fries-1.png"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Sweetpotato Fries",
       "price": 4.49,
       "description": "Seasoned sweet fries, perfect for any meal.",
@@ -100,7 +100,7 @@
       "image": "/src/images/bun-drop-images/fries-2.png"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Vanilla Milkshake",
       "price": 5.99,
       "description": "A creamy vanilla milkshake...",
@@ -109,7 +109,7 @@
       "image": "/src/images/bun-drop-images/milkshake-1.png"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Coca-Cola",
       "price": 1.99,
       "description": "A refreshing cold Coca-Cola.",
@@ -118,7 +118,7 @@
       "image": "/src/images/bun-drop-images/soda-1.png"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Diet Coke",
       "price": 1.99,
       "description": "A refreshing cold Diet Coke.",
@@ -127,7 +127,7 @@
       "image": "/src/images/bun-drop-images/soda-2.png"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Sprite",
       "price": 1.99,
       "description": "A refreshing cold Sprite.",
@@ -136,13 +136,246 @@
       "image": "/src/images/bun-drop-images/soda-3.png"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Root Beer",
       "price": 1.99,
       "description": "A refreshing cold Root Beer.",
       "category": "drinks",
       "stars": 3.1,
       "image": "/src/images/bun-drop-images/soda-4.png"
+    }
+  ],
+  "users": [
+    {
+      "id": "17d1",
+      "name": "user",
+      "email": "user@mail.com",
+      "password": "password",
+      "favorites": [],
+      "orders": []
+    },
+    {
+      "id": "631c",
+      "name": "newUser",
+      "email": "newUser@mail",
+      "password": "123456",
+      "favorites": [],
+      "orders": []
+    },
+    {
+      "id": "93a4",
+      "name": "hehe",
+      "email": "hehehe@mail.com",
+      "password": "Password",
+      "favorites": [
+        {
+          "id": "1",
+          "title": "Classic Burger",
+          "price": 8.99,
+          "description": "A classic beef burger with lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "stars": 10,
+          "image": "/src/images/bun-drop-images/burger-1.png"
+        },
+        {
+          "id": "2",
+          "title": "Black Burger ",
+          "price": 14.99,
+          "description": "Dark and savoury like crazy. Order this and get super-human strength",
+          "category": "burgers",
+          "stars": 7,
+          "image": "/src/images/bun-drop-images/burger-2.png"
+        },
+        {
+          "id": "3",
+          "title": "Cheeseburger",
+          "price": 9.49,
+          "description": "A juicy beef burger with double cheese, lettuce, and tomato.",
+          "category": "burgers",
+          "stars": 8,
+          "image": "/src/images/bun-drop-images/burger-3.png"
+        },
+        {
+          "id": "6",
+          "title": "Mushroom Swiss Burger",
+          "price": 10.49,
+          "description": "A beef burger topped with Swiss cheese and sautéed mushrooms.",
+          "category": "burgers",
+          "stars": 7.8,
+          "image": "/src/images/bun-drop-images/burger-6.png"
+        },
+        {
+          "id": "4",
+          "title": "Bacon Burger",
+          "price": 10.99,
+          "description": "A beef burger with crispy bacon, lettuce, tomato, and cheese.",
+          "category": "burgers",
+          "stars": 9.5,
+          "image": "/src/images/bun-drop-images/burger-4.png"
+        }
+      ],
+      "orders": [
+        {
+          "name": "hehe",
+          "address": "malmo",
+          "phone": "0701234567",
+          "cardNumber": "",
+          "ccv": "",
+          "cart": [
+            {
+              "id": "3",
+              "title": "Cheeseburger",
+              "price": 9.49,
+              "description": "A juicy beef burger with double cheese, lettuce, and tomato.",
+              "category": "burgers",
+              "stars": 8,
+              "image": "/src/images/bun-drop-images/burger-3.png",
+              "quantity": 2
+            },
+            {
+              "id": "2",
+              "title": "Black Burger ",
+              "price": 14.99,
+              "description": "Dark and savoury like crazy. Order this and get super-human strength",
+              "category": "burgers",
+              "stars": 7,
+              "image": "/src/images/bun-drop-images/burger-2.png",
+              "quantity": 1
+            },
+            {
+              "id": "15",
+              "title": "Coca-Cola",
+              "price": 1.99,
+              "description": "A refreshing cold Coca-Cola.",
+              "category": "drinks",
+              "stars": 1,
+              "image": "/src/images/bun-drop-images/soda-1.png",
+              "quantity": 1
+            },
+            {
+              "id": "12",
+              "title": "Curly Fries",
+              "price": 4.49,
+              "description": "Seasoned curly fries, perfect for any meal. Crazy good fries.",
+              "category": "sides",
+              "stars": 8,
+              "image": "/src/images/bun-drop-images/fries-1.png",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 40.45
+        },
+        {
+          "name": "hehe",
+          "address": "heheasd",
+          "phone": "0701234567",
+          "cardNumber": "",
+          "ccv": "",
+          "cart": [
+            {
+              "id": "5",
+              "title": "Veggie Burger",
+              "price": 8.49,
+              "description": "A delicious veggie patty with lettuce, tomato, and avocado.",
+              "category": "burgers",
+              "stars": 3,
+              "image": "/src/images/bun-drop-images/burger-5.png",
+              "quantity": 1
+            },
+            {
+              "id": "8",
+              "title": "Spicy Jalapeno Burger",
+              "price": 9.99,
+              "description": "A beef burger with spicy jalapenos, pepper jack cheese, and chipotle mayo.",
+              "category": "burgers",
+              "stars": 7.1,
+              "image": "/src/images/bun-drop-images/burger-8.png",
+              "quantity": 1
+            },
+            {
+              "id": "16",
+              "title": "Diet Coke",
+              "price": 1.99,
+              "description": "A refreshing cold Diet Coke.",
+              "category": "drinks",
+              "stars": 2,
+              "image": "/src/images/bun-drop-images/soda-2.png",
+              "quantity": 1
+            },
+            {
+              "id": "15",
+              "title": "Coca-Cola",
+              "price": 1.99,
+              "description": "A refreshing cold Coca-Cola.",
+              "category": "drinks",
+              "stars": 1,
+              "image": "/src/images/bun-drop-images/soda-1.png",
+              "quantity": 2
+            },
+            {
+              "id": "12",
+              "title": "Curly Fries",
+              "price": 4.49,
+              "description": "Seasoned curly fries, perfect for any meal. Crazy good fries.",
+              "category": "sides",
+              "stars": 8,
+              "image": "/src/images/bun-drop-images/fries-1.png",
+              "quantity": 2
+            }
+          ],
+          "totalPrice": 33.43
+        },
+        {
+          "name": "hehe",
+          "address": "another shop",
+          "phone": "0701234567",
+          "cardNumber": "",
+          "ccv": "",
+          "cart": [
+            {
+              "id": "9",
+              "title": "Blue Cheese Burger",
+              "price": 10.49,
+              "description": "A beef burger topped with blue cheese, lettuce, and tomato.",
+              "category": "burgers",
+              "stars": 7.3,
+              "image": "/src/images/bun-drop-images/burger-9.png",
+              "quantity": 1
+            },
+            {
+              "id": "17",
+              "title": "Sprite",
+              "price": 1.99,
+              "description": "A refreshing cold Sprite.",
+              "category": "drinks",
+              "stars": 3,
+              "image": "/src/images/bun-drop-images/soda-3.png",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 12.48
+        },
+        {
+          "name": "hah",
+          "address": "asdsdf",
+          "phone": "0701234567",
+          "cardNumber": "",
+          "ccv": "",
+          "cart": [
+            {
+              "id": "1",
+              "title": "Classic Burger",
+              "price": 8.99,
+              "description": "A classic beef burger with lettuce, tomato, and cheese.",
+              "category": "burgers",
+              "stars": 10,
+              "image": "/src/images/bun-drop-images/burger-1.png",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 8.99
+        }
+      ]
     }
   ]
 }
