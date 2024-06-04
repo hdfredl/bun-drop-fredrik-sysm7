@@ -68,7 +68,7 @@ function LogIn({ setUser }) {
         <button onClick={toggleSignUpModal}>Sign up</button>
         <br />
 
-        {isSignUpModalVisible && (
+        {isModalVisible && (
           <div>
             <div className="modal-for-SignUp">
               <button className="modal-close" onClick={closeSignUpModal}>
